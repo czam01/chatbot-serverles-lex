@@ -1,10 +1,13 @@
+#good chatbot
+
+
 import boto3
 import botocore
 
 GLUE =  boto3.client('glue')
 S3 = boto3.client('s3')
 
-def use_perkins_brain(intention_name,slots):
+def use_perkins_brain(intention_name,slots): 
     if intention_name == 'Glue_control':
         glue_options = slots.get('glue_options')
         glue_command = slots.get('glue_command')
